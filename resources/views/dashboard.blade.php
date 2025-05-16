@@ -11,6 +11,7 @@
   
   <!-- Firebase Config -->
   <script>
+    console.log("IS_ADMIN value:", {{ $isAdmin ? 'true' : 'false' }});
     window.FIREBASE_API_KEY = "{{ config('firebase.api_key') }}";
     window.FIREBASE_AUTH_DOMAIN = "{{ config('firebase.auth_domain') }}";
     window.FIREBASE_DATABASE_URL = "{{ config('firebase.database_url') }}";
@@ -19,6 +20,7 @@
     window.FIREBASE_MESSAGING_SENDER_ID = "{{ config('firebase.messaging_sender_id') }}";
     window.FIREBASE_APP_ID = "{{ config('firebase.app_id') }}";
     window.FIREBASE_VAPID_KEY = "{{ config('firebase.vapid_key') }}";
+    window.IS_ADMIN = {{ $isAdmin ? 'true' : 'false' }};
   </script>
 </head>
 <body>
@@ -30,6 +32,11 @@
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
+    <div class="text-center mb-3">
+      <i class="fas fa-user-circle fa-3x text-light mb-2"></i>
+      <p class="text-light mb-0">{{ $user['name'] }}</p>
+      <p class="text-light opacity-75 small"><span class="badge {{ $isAdmin ? 'bg-danger' : 'bg-secondary' }}">{{ $isAdmin ? 'Admin' : 'User' }}</span></p>
+    </div>
     <ul class="nav flex-column">
       <li class="nav-item mb-2">
         <a class="nav-link text-white" href="#"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
@@ -47,13 +54,14 @@
       <i class="fas fa-bars"></i>
     </button>
     <span>🌤️ GacoRain</span>
+    <span class="ms-3 badge {{ $isAdmin ? 'bg-danger' : 'bg-secondary' }}">{{ $isAdmin ? 'Admin' : 'User' }}</span>
   </div>
   <form method="POST" action="{{ route('logout') }}" style="margin:0;">
-    @csrf
-    <button type="submit" class="btn btn-danger btn-sm btn-outline-light">
-      <i class="fas fa-sign-out-alt"></i> Logout
-    </button>
-  </form>
+  @csrf
+  <button type="submit" class="btn btn-danger btn-sm btn-outline-light">
+    <i class="fas fa-sign-out-alt"></i> Logout
+  </button>
+</form>
 </h1>
 
 <div class="section">

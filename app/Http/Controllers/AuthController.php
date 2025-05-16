@@ -80,8 +80,12 @@ class AuthController extends Controller
         $database = app('firebase.database');
         $postsRef = $database->getReference('posts')->getValue();
         
+        $user = Session::get('user');
+        $isAdmin = isset($user['role']) && $user['role'] === 'admin';
+        
         return view('dashboard', [
-            'user' => Session::get('user'), // Now includes role
+            'user' => $user,
+            'isAdmin' => $isAdmin,
             'posts' => $postsRef
         ]);
     }
