@@ -36,9 +36,6 @@
       <li class="nav-item mb-2">
         <a class="nav-link text-white" href="#"><i class="fas fa-hourglass-half me-2"></i>Riwayat</a>
       </li>
-      <li class="nav-item mb-2">
-        <a class="nav-link text-white" href="#"><i class="fas fa-cogs me-2"></i>Controls</a>
-      </li>
     </ul>
   </div>
 </div>
