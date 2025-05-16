@@ -1,0 +1,181 @@
+body {
+  background: #102E50;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 20px;
+}
+
+h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F7374F;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.card {
+  background: #F7374F;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px;
+  color: white;
+  flex: 1;
+  min-width: 250px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.weather-icon,
+.servo-icon {
+  font-size: 40px;
+}
+
+.gauge-bar {
+  background: #333;
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.gauge-fill {
+  height: 10px;
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+}
+
+.chart-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.chart-card {
+  background: #F7374F;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  min-width: 300px;
+}
+
+button {
+  background: #F7374F;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.section {
+  margin-bottom: 30px;
+ }
+
+label {
+   font-weight: bold;
+   margin-right: 10px;
+ }
+
+input[type="datetime-local"] {
+   padding: 6px;
+   margin: 5px;
+   border-radius: 4px;
+   border: none;
+ }
+.filter-btn {
+   background-color: #F7374F; /* oranye */
+ }
+
+.delete-btn {
+   background-color: #F7374F; /* merah */
+}
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 15px;
+}
+
+th, td {
+   border: 1px solid #555;
+   padding: 10px 12px;
+   text-align: left;
+}
+
+th {
+   background-color: #F7374F; /* oranye gelap */
+   color: white;
+}
+
+tr:nth-child(even) {
+   background-color: #111;
+}
+
+tr:hover {
+  background-color: #222;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+.bg-custom-gradient {
+  background: linear-gradient(to right, #F7374F, #102E50);
+}
+
+.btn-gradient {
+  background: linear-gradient(to right, #102E50, #F7374F);
+}
+
+.right-panel-gradient {
+  background: linear-gradient(to right, #102E50, #F7374F);
+}
+
+.google-btn {
+  background: #fff;
+  color: #757575;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.google-btn:hover {
+  background: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.card-control {
+  background-color: #F7374F;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  color: white;
+}
+.btn-control {
+  margin: 10px 10px 10px 0;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #F7374F;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-control:hover {
+  background-color: #f39c12;
+  color: white;
+}
+
+.status-box {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.status-icon {
+  font-size: 2rem;
+  margin-right: 10px;
+}
